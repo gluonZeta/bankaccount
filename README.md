@@ -42,7 +42,7 @@ http://localhost:8080/api/history?firstname=Gri&code=1234
 http://localhost:8080/api/createAccount  
 with the parameters:  
 	lastname=RAJ  
-	firstname=gru
+	firstname=gru  
 	code=1234  
 
 example:  
