@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>andraina.projects</groupId>
 	<artifactId>controller</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0-SNAPSHOT</version>
 	<name>controller</name>
 	<description>Bank Account project</description>
 	<packaging>war</packaging>
@@ -35,6 +35,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>andraina.projects</groupId>
+	  		<artifactId>dataLayer</artifactId>
+	  		<version>1.0-SNAPSHOT</version>
 		</dependency>
 		
 	</dependencies>
