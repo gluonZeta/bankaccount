@@ -73,6 +73,7 @@ public class UserAccountServicImpl implements UserAccountService{
 	}
 
 	@Override
+	@Transactional
 	public List<OperationDto> getOperationHistory(String firstname, String code) {
 		UserDo userDo = userRepository.findByFirstnameAndCode(firstname, code);
 		AccountDo accountDo = userDo.getAccountDo();
@@ -83,6 +84,20 @@ public class UserAccountServicImpl implements UserAccountService{
 				.collect(Collectors.toList());
 		operations.sort(Comparator.comparing(OperationDto::getOperationDate).reversed());
 		return operations;
+	}
+
+	@Override
+	@Transactional
+	public UserDto createNewUser(String lastname, String firstname, String code) {
+		UserDo userDo = new UserDo(lastname, firstname, code);
+		AccountDo accountDo = new AccountDo();
+		accountDo.setBalance((long) 0);
+		userDo.setAccountDo(accountDo);
+		userDo = userRepository.save(userDo);
+		accountDo.setUser(userDo);
+		accountDo = accountRepository.save(accountDo);
+		userMapper = new UserMapperImpl();
+		return userMapper.toDto(userDo);
 	}
 
 }

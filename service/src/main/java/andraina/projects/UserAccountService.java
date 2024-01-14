@@ -13,5 +13,6 @@ public interface UserAccountService {
 	
 	public List<OperationDto> getOperationHistory(String firstname, String code);
 	
+	public UserDto createNewUser(String lastname, String firstname, String code);
 	
 }

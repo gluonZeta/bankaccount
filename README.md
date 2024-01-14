@@ -38,6 +38,17 @@ example:
 http://localhost:8080/api/history?firstname=Gri&code=1234
 
 
+# Api EndPoint to create new UserAccount  
+http://localhost:8080/api/createAccount  
+with the parameters:  
+	lastname=RAJ  
+	firstname=gru
+	code=1234  
+
+example:  
+http://localhost:8080/api/createAccount?lastname=RAJ&firstname=tia&code=1234  
+
+
 # Data in H2 in memory base
 we have the users below that we can use  
 lastname : Fried  
