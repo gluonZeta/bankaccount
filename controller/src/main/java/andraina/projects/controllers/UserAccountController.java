@@ -27,15 +27,27 @@ public class UserAccountController {
 		String errorMessage = "The user doesn't have an account or your informations is wrong !!";
 		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(errorMessage);
 	}
+	
+	// To retrive operation history
+	@GetMapping("/history")
+	public ResponseEntity<?> getOperations(
+			@RequestParam String firstname, 
+			@RequestParam String code){
+		return ResponseEntity.ok(userAccountService.getOperationHistory(firstname, code));
+	}
+	
 
+	// to do deposit or withdrawal operation
 	@GetMapping("/operation")
 	public ResponseEntity<?> doOperation(@RequestParam String firstname, 
 			@RequestParam String code, 
 			@RequestParam String amount,
 			@RequestParam String operationType){
-		return null;
+		UserDto userDto = userAccountService.operation(firstname, code, amount, operationType);
+		return ResponseEntity.ok(userDto);
 	}
 	
+	// To get User Account Information
 	@GetMapping("/userAccountInfo")
 	public ResponseEntity<?> getUserAccountInformations(
 			@RequestParam String firstname, 

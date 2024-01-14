@@ -38,6 +38,17 @@ public class OperationDo {
 	public OperationDo() {}
 
 
+	public OperationDo(String operationType, Long amount, LocalDateTime operationDate, Long balance,
+			AccountDo accountDo) {
+		super();
+		this.operationType = operationType;
+		this.amount = amount;
+		this.operationDate = operationDate;
+		this.balance = balance;
+		this.accountDo = accountDo;
+	}
+
+
 	public Long getId() {
 		return id;
 	}

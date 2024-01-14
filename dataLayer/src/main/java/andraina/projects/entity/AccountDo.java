@@ -24,7 +24,7 @@ public class AccountDo {
 	@Column(name = "balance")
 	private Long balance;
 
-	@OneToOne
+	@OneToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "user_id")
 	private UserDo userDo;
 	
