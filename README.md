@@ -11,7 +11,18 @@ mvn spring-boot:run -pl controller
 # URI to retrive userAccount INFO
 http://localhost:8080/api/userAccountInfo?firstname=Galou&code=1234
 
+  
+# Api EndPoint to create new UserAccount  
+http://localhost:8080/api/createAccount  
+with the parameters:  
+	lastname=RAJ  
+	firstname=gru  
+	code=1234  
 
+example:  
+http://localhost:8080/api/createAccount?lastname=RAJ&firstname=tia&code=1234  
+
+  
 # Api EndPoint user stories 1 and 2
 http://localhost:8080/api/operation/do  
 with the parameters:  
@@ -37,16 +48,6 @@ with the parameters:
 example:  
 http://localhost:8080/api/history?firstname=Gri&code=1234
 
-
-# Api EndPoint to create new UserAccount  
-http://localhost:8080/api/createAccount  
-with the parameters:  
-	lastname=RAJ  
-	firstname=gru  
-	code=1234  
-
-example:  
-http://localhost:8080/api/createAccount?lastname=RAJ&firstname=tia&code=1234  
 
 
 # Data in H2 in memory base
