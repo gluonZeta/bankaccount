@@ -1,7 +1,7 @@
 # bankaccount
-Application for bank account operation
-java version : 11
-Spring boot 2.6.6
+Application for bank account operation  
+java version : 11  
+Spring boot 2.6.6  
 
 # How to launch
 Go to the bankAccount folder  
