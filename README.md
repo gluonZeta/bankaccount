@@ -24,7 +24,7 @@ http://localhost:8080/api/createAccount?lastname=RAJ&firstname=tia&code=1234
 
   
 # Api EndPoint user stories 1 and 2
-http://localhost:8080/api/operation/do  
+http://localhost:8080/api/operation  
 with the parameters:  
 	firstname=Fred  
 	code=1234  
